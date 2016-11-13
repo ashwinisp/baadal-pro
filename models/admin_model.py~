@@ -838,7 +838,7 @@ def get_my_vm_util_data(util_period, hosted_vm):
     vmlist = []
     for vm in vms:
 	for hvm in hosted_vm:
-		if hosted_vm.id == vm.id:
+		if hosted_vm['vm_id' == vm['vm_id']:
 			util_result = fetch_rrd_data(vm.vm_identity, util_period)
 			logger.debug(str(vm.vm_name)+ str(util_result))
 			cpu_percent = round((float(util_result[1])*100)/(float(int vm.vCPU)*5*60*1000000000)),2)

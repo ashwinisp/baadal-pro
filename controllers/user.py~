@@ -94,11 +94,11 @@ def list_my_vm_stats():
     form = get_util_period_form()
     util_period = VM_UTIL_24_HOURS
     form.vars.util_period = util_period
-    hosted_vm = get_my_hosted_vm()
+
     if form.accepts(request.vars, session, keepvalues=True):
 	util_period = int(form.vars.util_period)
     
-    vm_util_data = get_my_vm_util_data(util_period, hosted_vm)
+    vm_util_data = get_vm_util_data(util_period)
     
     return dict(vm_util_data=vm_util_data, form=form)
 

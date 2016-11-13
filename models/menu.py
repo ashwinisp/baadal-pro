@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*- 
 ###################################################################################
 # Added to enable code completion in IDE's.
 if 0:
@@ -47,7 +47,7 @@ if auth.is_logged_in():
     if vm_enabled:
         response.user_menu.insert(2, (T('Request VM'), False, URL('user','request_vm')))
         response.user_menu.insert(3, (T('My VMs'), False, URL('user','list_my_vm')))
-	response.user_menu.insert(4, (T('My VM-Stats'), False, URL('user','list_my_vm')))
+	response.user_menu.insert(4, (T('My VM-Stats'), False, URL('user','list_my_vm_stats')))
 
     if not is_general_user():
         response.faculty_menu = [
